@@ -2,7 +2,7 @@
 
 ######################################################################
 ## Basic Aegir bulk backup script.                                  ##
-## Version 0.1                                                      ##
+## For Aegir HEAD. Not compatible with 0.4alpha3                    ##
 ## Copyright 2010 Miguel Jacq                                       ## 
 ## mig@mig5.net www.mig5.net                                        ##
 ##                                                                  ##
