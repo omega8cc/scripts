@@ -41,11 +41,11 @@ VERBOSE=0
 # Add debug information? (overrules VERBOSE) 0 = no, 1 = yes
 DEBUG=0
 
-#####################################################################
-##                                                                 ##  
-##      You should not need to change anything below this line     ##
-##                                                                 ##
-#####################################################################
+######################################################################
+##                                                                  ##
+##      You should not need to change anything below this line      ##
+##                                                                  ##
+######################################################################
 
 
 # Do the backup
