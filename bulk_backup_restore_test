@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Backup test restore script for testing duplicity backups
+
+if [ ! `whoami` = "root" ] ; then
+  echo "You must run this script as root"
+  exit 1
+fi
+
+# Where are the backups stored?
+BACKUP_DIR=/mnt/disk/backup/servers
+
+# Does this directory exist?
+if [ ! -d "$BACKUP_DIR" ]; then
+  echo "The backup directory doesn't appear to exist! Uh-oh."
+  exit 1
+fi
+
+
+# Generate an array of the backup dirs for this server
+BACKED_UP_SERVERS=`ls -1 $BACKUP_DIR/`
+
+for server in ${BACKED_UP_SERVERS[*]}; do
+  /usr/local/bin/backup_restore_test $server | mail -s "Backup report - $server" you@example.com
+done
