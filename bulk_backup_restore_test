@@ -23,7 +23,7 @@ BACKED_UP_SERVERS=`ls -1 $BACKUP_DIR/`
 
 for server in ${BACKED_UP_SERVERS[*]}; do
   # not on files, which shouldn't be here anyway
-  if [ -d $server ]; then
+  if [ -d "$BACKUP_DIR/$server" ]; then
     /usr/local/bin/backup_restore_test $server | mail -s "Backup report - $server" you@example.com
   fi
 done
